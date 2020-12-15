@@ -4,6 +4,6 @@ def print_matrix_integer(matrix=[[]]):
         for numb in lst:
             l = len(lst) - 1
             if lst.index(numb) == l:
-                print("{}".format(numb))
+                print("{:d}".format(numb))
             else:
-                print("{}".format(numb), end=' ')
+                print("{:d}".format(numb), end=' ')

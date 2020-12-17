@@ -10,13 +10,14 @@ def roman_to_int(roman_string):
     i = 0
     roman_s = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
                'C': 100, 'D': 500, 'M': 1000}
+    i = 0
     for s in lst:
         if s not in roman_s:
             return 0
         else:
-            idx = lst.index(s)
-            if s == lst[-1] or roman_s[s] >= roman_s[lst[idx + 1]]:
+            if i + 1 == len(lst) or roman_s[s] >= roman_s[lst[i + 1]]:
                 numb_r += roman_s[s]
             else:
                 numb_r -= roman_s[s]
+        i += 1
     return numb_r

@@ -6,7 +6,7 @@
 
 Introduction to python programming and the print statement
 
-### 0x05. Python - Exceptions [link](https://github.com/user/repo/blob/branch/other_file.md)
+### 0x05. Python - Exceptions [link](https://github.com/Dirac156/alx-higher_level_programming/tree/master/0x05-python-exceptions)
 
 #### Learning Objectives
 

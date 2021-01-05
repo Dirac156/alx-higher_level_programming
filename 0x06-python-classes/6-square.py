@@ -5,6 +5,9 @@ This file contains the class Square
 
 
 class Square():
+    """
+    This is the Square class
+    """
     def __init__(self, size=0, position=(0, 0)):
         if type(size) != int:
             print("size must be an integer", end="")

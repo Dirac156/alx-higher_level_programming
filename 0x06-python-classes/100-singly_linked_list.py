@@ -50,6 +50,10 @@ class Node:
             else:
                 self.__next_node = value
 
+"""
+SynglyLinkedList.
+"""
+
 
 class SinglyLinkedList:
     """

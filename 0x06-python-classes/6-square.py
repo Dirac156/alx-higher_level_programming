@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This file contains the class Square
+"""
+
+
 class Square():
     def __init__(self, size=0, position=(0, 0)):
         if type(size) != int:

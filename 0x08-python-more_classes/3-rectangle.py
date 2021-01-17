@@ -48,7 +48,7 @@ class Rectangle:
             for el_2 in range(0, self.__width):
                 print("#", end="")
             print("")
-        if self.__width == 0 or self.__height== 0:
+        if self.__width == 0 or self.__height == 0:
             print("")
 
     def __str__(self):

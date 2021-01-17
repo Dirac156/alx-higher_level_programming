@@ -9,23 +9,8 @@ class Rectangle():
     This is the class rectangle
     """
     def __init__(self, width=0, height=0):
-        if type(width) != int:
-            print("width must be an integer", end="")
-            raise TypeError
-        elif width < 0:
-            print("width must be >= 0", end="")
-            raise ValueError
-        else:
-            self.__width = width
-
-        if type(height) != int:
-            print("height must be an integer", end="")
-            raise TypeError
-        elif height < 0:
-            print("height must be >= 0", end="")
-            raise ValueError
-        else:
-            self.__height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):

@@ -42,3 +42,23 @@ class Rectangle:
             return 0
         else:
             return (self.__height + self.__width) * 2
+
+    def print(self):
+        for el in range(0, self.__height):
+            for el_2 in range(0, self.__width):
+                print("#", end="")
+            print("")
+        if self.__width == 0 or self.__height== 0:
+            print("")
+
+    def __str__(self):
+        s = ""
+        if self.__width == 0 or self.__height == 0:
+            s += "\n"
+        else:
+            for el in range(0, self.__height):
+                for el_2 in range(0, self.__width):
+                    s += "#"
+                if el != self.__height - 1:
+                    s += "\n"
+        return s

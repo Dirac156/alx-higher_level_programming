@@ -7,7 +7,7 @@ class MyInt(int):
         self.a = a
 
     def __eq__(self, other):
-        return (self.a != other)
+        return !(self.a == other)
 
     def __ne__(self, other):
-        return (self.a == other)
+        return !(self.a != other)

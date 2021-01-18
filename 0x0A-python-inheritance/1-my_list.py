@@ -4,9 +4,9 @@
 
 class MyList(list):
     """ print new list """
+    pass
+
     def print_sorted(self):
-        new = []
-        for i in self:
-            new.append(i)
-        new.sort()
-        print(new)
+        """Methot that sorted a list"""
+
+        print(sorted(list(self)))

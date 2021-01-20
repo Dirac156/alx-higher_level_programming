@@ -9,6 +9,3 @@ class MyList(list):
         """Methot that sorted a list"""
 
         print(sorted(list(self)))
-
-    def __str__(self):
-        return

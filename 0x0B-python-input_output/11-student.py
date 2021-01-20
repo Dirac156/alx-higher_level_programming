@@ -23,6 +23,15 @@ class Student:
 
     def reload_from_json(self, json):
         values = json
-        self.first_name = values["first_name"]
-        self.last_name = values["last_name"]
-        self.age = values["age"]
+        try:
+            self.first_name = values["first_name"]
+        except Exception:
+            pass
+        try:
+            self.last_name = values["last_name"]
+        except Exception:
+            pass
+        try:
+            self.age = values["age"]
+        except Exception:
+            pass

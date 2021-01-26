@@ -47,6 +47,6 @@ class Square(Rectangle):
         """ user printed output"""
         id = self.id
         size = self.__size
-        x = self.__x
-        y = self.__y
+        x = self.x
+        y = self.y
         return {'id': id, 'x': x, 'size': size, 'y': y}

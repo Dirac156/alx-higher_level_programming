@@ -92,12 +92,13 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """update instance attributes"""
-        attributes = ['id', 'width', 'height', 'x', 'y']
+        idx = 0
+        attr = ["id", "width", "heigth", "x", "y"]
         if args:
-            for att, arg in zip(attributes, args):
-                setattr(self, att, arg)
+            for numb in args:
+                setattr(self, attr[idx], numb)
+                idx += 1
         elif kwargs:
             for key, value in kwargs.items():
-                if key in attributes:
+                if key in attr:
                     setattr(self, key, value)
-

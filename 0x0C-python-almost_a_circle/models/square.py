@@ -33,6 +33,7 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}".format(id, x, y, size)
 
     def update(self, *args, **kwargs):
+        """overider parents method"""
         attr = ['id', 'size', 'x', 'y']
         if args:
             for at, numb in zip(attr, args):

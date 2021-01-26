@@ -40,3 +40,29 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create a new object from dictionary"""
+        if cls.__name__ == "Rectangle":
+            new = cls(10, 10)
+        elif cls.__name__ == "Square":
+            new = cls(10, 10)
+        new.update(**dictionary)
+        return new
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save to csv"""
+        filename = cls.__name__ + ".csv"
+        text = []
+        if list_objs is not None:
+            for lst in list_objs:
+                text.append(cls.to_json_string(lst))
+        with open(filename, mode="w", encoding="utf-8") as f:
+            f.write(filename)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """load from csv"""
+        filename = cls.__name__ + ".csv"

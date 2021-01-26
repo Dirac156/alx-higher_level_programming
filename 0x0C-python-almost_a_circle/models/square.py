@@ -27,7 +27,7 @@ class Square(Rectangle):
     def __str__(self):
         """overide parent's str method"""
         id = self.id
-        size = self.__size
+        size = self.size
         x = self.x
         y = self.y
         return "[Square] ({}) {}/{} - {}".format(id, x, y, size)

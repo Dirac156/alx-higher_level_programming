@@ -22,7 +22,7 @@ class Square(Rectangle):
         """ size setter """
         self.width = value
         self.height = value
-        self.__size = value
+        self.size = value
 
     def __str__(self):
         """overide parent's str method"""

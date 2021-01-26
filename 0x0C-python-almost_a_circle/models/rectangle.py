@@ -96,7 +96,8 @@ class Rectangle(Base):
         attr = ["id", "width", "heigth", "x", "y"]
         if args:
             for numb in args:
-                setattr(self, attr[idx], numb)
+                if idx <= 4:
+                    setattr(self, attr[idx], numb)
                 idx += 1
         elif kwargs:
             for key, value in kwargs.items():

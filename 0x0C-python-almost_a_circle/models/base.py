@@ -32,3 +32,11 @@ class Base:
                 text.append(lst.to_dictionary())
         with open(filename, mode="w", encoding="utf-8") as f:
             return f.write(Base.to_json_string(text))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """return list representative of json file"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)

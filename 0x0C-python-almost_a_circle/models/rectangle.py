@@ -90,10 +90,15 @@ class Rectangle(Base):
         y = self.__y
         return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, w, h)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update instance attributes"""
         idx = 0
         attr = ["id", "width", "heigth", "x", "y"]
-        for numb in args:
-            setattr(self, attr[idx], numb)
-            idx += 1
+        if args:
+            for numb in args:
+                setattr(self, attr[idx], numb)
+                idx += 1
+        else:
+            for key, value in kwargs.items():
+                if key in attr:
+                    setattr(self, key, value)

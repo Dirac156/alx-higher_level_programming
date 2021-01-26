@@ -42,3 +42,11 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 if key in attr:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """ user printed output"""
+        id = self.id
+        size = self.__size
+        x = self.__x
+        y = self.__y
+        return {'id': id, 'x': x, 'size': size, 'y': y}

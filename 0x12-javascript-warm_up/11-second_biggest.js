@@ -2,6 +2,11 @@
 
 const getArgument = function (myArray) {
   for (let i = 0; i < myArray.length; i++) {
+    if (isNaN(myArray[i])) {
+      myArray.splice(i, i);
+    }
+  }
+  for (let i = 0; i < myArray.length; i++) {
     myArray[i] = parseInt(myArray[i]);
   }
 

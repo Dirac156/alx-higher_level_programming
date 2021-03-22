@@ -2,8 +2,9 @@
 
 const process = require('process');
 
-if (process.argv.length < 4) {
+const myArray = process.argv.slice(2, process.argv.length);
+if (myArray < 2) {
   console.log(0);
 } else {
-  console.log(process.argv.sort().reverse()[1]);
+  console.log(myArray.sort().reverse()[1]);
 }

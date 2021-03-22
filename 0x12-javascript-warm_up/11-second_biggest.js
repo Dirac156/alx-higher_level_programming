@@ -14,5 +14,6 @@ const myArray = process.argv.slice(2, process.argv.length);
 if (myArray < 2) {
   console.log(0);
 } else {
-  console.log(getArgument(myArray).sort().reverse()[1]);
+  console.log(getArgument(myArray)
+    .sort().reverse()[1]);
 }

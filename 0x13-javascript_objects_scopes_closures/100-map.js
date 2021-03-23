@@ -4,5 +4,5 @@ const list = require('./100-data').list;
 
 console.log(list);
 console.log(list.map(
-  nb => nb * list.indexOf(nb)
+  (nb, idx ) => nb * idx
 ));

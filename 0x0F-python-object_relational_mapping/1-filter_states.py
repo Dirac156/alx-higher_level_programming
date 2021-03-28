@@ -16,10 +16,9 @@ if __name__ == '__main__':
                                passwd=password,
                                db=db)
     curs = database.cursor()
-    curs.execute("SELECT * FROM states ORDER BY id ASC")
+    curs.execute('SELECT * FROM `states` WHERE `name` LIKE BINARY "N%%";')
     rows = curs.fetchall()
     for row in rows:
-        if (row[1] == 'N'):
-            print(row)
+        print(row)
     curs.close()
     database.close()

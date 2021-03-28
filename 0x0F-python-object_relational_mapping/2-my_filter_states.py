@@ -17,7 +17,7 @@ if __name__ == '__main__':
                                passwd=password,
                                db=db)
     curs = database.cursor()
-    curs.execute('SELECT * FROM `states` WHERE `name` LIKE BINARY "{}"\
+    curs.execute('SELECT * FROM states WHERE name LIKE BINARY "{}"\
                   ORDER BY states.id ASC;'.format(user_input))
     rows = curs.fetchall()
     for row in rows:

@@ -11,8 +11,8 @@ Base = declarative_base()
 
 
 class State(Base):
-    def __init(self):
-        pass
+    """class state """
+
     __tablename__ = 'states'
     id = Column(Integer, nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)

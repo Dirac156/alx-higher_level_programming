@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""state"""
 
 
 import MySQLdb

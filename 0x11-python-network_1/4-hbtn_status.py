@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 """url fetching script in python"""
 
-import requests
-
-url = 'https://intranet.hbtn.io/status'
-
-
 if __name__ == '__main__':
-    req = requests.get(url)
+    import requests
+    r = requests.get('https://intranet.hbtn.io/status')
+    text = r.text
     print("Body response:")
-    print("\t- type: {}".format(type(req.text)))
-    print("\t- content: {}".format(req.text))
+    print("\t- type: {}".format(type(text)))
+    print("\t- content: {}".format(text))
